@@ -1,0 +1,10 @@
+@import "variables";
+
+$input-btn-padding-y-lg: 1rem;
+$input-btn-padding-x-lg: 2.5rem;
+$input-btn-font-size-lg: 18px;
+
+$border-radius-lg: 40px;
+
+// Bootstrap and its default variables
+@import "../../node_modules/bootstrap/scss/bootstrap";

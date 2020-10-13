@@ -1,3 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+@import "customBootstrap";
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: $gray;
+}
+
+a.logo, .logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: $dark-blue;
+  .outlined {
+    color: #fcae61;
+  }
+}
+
+h1, h2 {
+  color: $dark-blue;
+  font-weight: 600;
+}
+
 h1 {
-  color: red;
+  font-size: 45px;
+  @include media-breakpoint-up(xl) {
+    font-size: 60px;
+  }
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.btn-lg {
+  font-weight: 700;
+}
+
+nav {
+  .nav-item {
+    .nav-link {
+      color: $dark-blue;
+    }
+  }
+}
+
+.award {
+  padding-right: 48px;
+  background: $light-gray;
+  color: $dark-blue;
+  font-size: 18px;
+  .icon {
+    background: $orange;
+    color: white;
+    border-radius: $border-radius-lg;
+    padding: 8px 10px;
+    margin-right: 8px;
+  }
+}
+
+header {
+  background:
+          url(./images/bgCircles.png) center bottom no-repeat,
+          url(./images/bgCircles2.png) left center no-repeat,
+          url(./images/city.png) center bottom no-repeat,
+          rgba(#f9fbfc, 0.4);
+  .content {
+    .description {
+      font-size: 18px;
+    }
+  }
+}
+
+main {
+  .features-list {
+    .feature {
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .img-container {
+        border-radius: 50%;
+        padding: 15px;
+      }
+
+      @mixin featureMixin($color) {
+        .title {
+          color: $color;
+        }
+        .img-container {
+          background: rgba($color, 0.05);
+        }
+      }
+
+      &.feature-primary {
+        @include featureMixin($primary)
+      }
+
+      &.feature-success {
+        @include featureMixin($success)
+      }
+
+      &.feature-danger {
+        @include featureMixin($danger)
+      }
+    }
+  }
 }
